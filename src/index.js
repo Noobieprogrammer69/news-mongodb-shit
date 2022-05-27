@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import DataProvider from './redux/store';
+
+import { TransactionProvider } from './context/TransactionContext';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <TransactionProvider>
+    <React.StrictMode>
+      <DataProvider>
+        <App />
+      </DataProvider>
+    </React.StrictMode>
+  </TransactionProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
