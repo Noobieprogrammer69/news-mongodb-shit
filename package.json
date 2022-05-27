@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "news-mongodb-shit.vercel.app",
+  "proxy": "http://news-mongodb-shit.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
